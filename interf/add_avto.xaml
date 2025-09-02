@@ -1,0 +1,103 @@
+﻿<Window x:Class="interf.Avto_p.add_avto"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:interf"
+        WindowState="Maximized"
+        WindowStyle="None"
+        mc:Ignorable="d"
+        Title="AVTORENT" Height="450" Width="800">
+    <Grid Margin="0,1,0,-1">
+        <Viewbox>
+            <Grid Height="450" Width="800">
+                <Label x:Name="label_vodit" Content="ДОБАВЛЕНИЕ АВТОМОБИЛЯ" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="66" Width="583" FontSize="40" Background="{x:Null}" Foreground="#FFED5C18"/>
+                <TextBox x:Name="textbox_Type" HorizontalAlignment="Left"  Margin="288,163,0,0" BorderThickness="3" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="384" Height="34" Foreground="Black" BorderBrush="#FFED5C18" FontSize="18" FontFamily="Cascadia Mono" TextAlignment="Center" Padding="0,3,0,0" >
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="20"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+                <Label x:Name="label_add" Content="Тип автомобиля" HorizontalAlignment="Left" Height="32" Margin="124,164,0,0" VerticalAlignment="Top" Width="159" FontSize="18" FontWeight="Bold" Background="White"/>
+                <TextBox x:Name="textbox_Sum" HorizontalAlignment="Left" Margin="305,0,0,0" BorderThickness="3" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="367" Height="34" Foreground="Black" BorderBrush="#FFED5C18" FontSize="18" FontFamily="Cascadia Mono" TextAlignment="Center" Padding="0,3,0,0">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="20"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+                <Label x:Name="label_add1" Content="Стоимость аренды" HorizontalAlignment="Left" Height="32" Margin="124,0,0,0" VerticalAlignment="Center" Width="176" FontSize="18" FontWeight="Bold" Background="White"/>
+                <TextBox x:Name="textbox_SumMKAD" HorizontalAlignment="Right" Margin="0,0,128,165" BorderThickness="3" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" Width="259" Height="34" Foreground="Black" BorderBrush="#FFED5C18" FontSize="18" FontFamily="Cascadia Mono" TextAlignment="Center" Padding="0,3,0,0">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="20"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+                <Label x:Name="label_add2" Content="Стоимость аренды за МКАДом" HorizontalAlignment="Right" Height="33" Margin="0,0,392,167" VerticalAlignment="Bottom" Width="284" FontSize="18" FontWeight="Bold" Background="White"/>
+                <TextBox x:Name="textbox_Year" HorizontalAlignment="Left" Margin="252,121,0,0" BorderThickness="3" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="420" Height="34" Foreground="Black" BorderBrush="#FFED5C18" FontSize="18" FontFamily="Cascadia Mono" TextAlignment="Center" Padding="0,3,0,0">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="20"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+                <Label x:Name="label_add3" Content="Год выпуска" HorizontalAlignment="Right" Height="33" Margin="0,0,553,296" VerticalAlignment="Bottom" Width="123" FontSize="18" FontWeight="Bold" Background="White"/>
+                <Button Content="добавить" FontSize="15" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Background="#FFED5C18" BorderBrush="#FFED5C18" BorderThickness="3" Height="51" Width="110" Click="cl_add" FontWeight="Bold" FontStyle="Italic" Foreground="White">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Content="      " HorizontalAlignment="Right" Margin="0,0,726,11" VerticalAlignment="Bottom" Height="39" Width="46"  Click="cancel">
+                    <Button.Foreground>
+                        <SolidColorBrush Color="Black" Opacity="0"/>
+                    </Button.Foreground>
+                    <Button.BorderBrush>
+                        <SolidColorBrush Color="White" Opacity="0.015"/>
+                    </Button.BorderBrush>
+                    <Button.Background>
+                        <ImageBrush ImageSource="/image/cancel.png"/>
+                    </Button.Background>
+                </Button>
+                <TextBox x:Name="textbox_ID" HorizontalAlignment="Left" Margin="355,78,0,0" BorderThickness="3" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="317" Height="34" Foreground="Black" BorderBrush="#FFED5C18" FontSize="18" FontFamily="Cascadia Mono" TextAlignment="Center" Padding="0,3,0,0">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="20"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+                <Label x:Name="label_add3_Копировать" Content="Государственный номер" HorizontalAlignment="Right" Height="33" Margin="0,0,445,340" VerticalAlignment="Bottom" Width="231" FontSize="18" FontWeight="Bold" Background="White"/>
+                <TextBox x:Name="textbox_Requirements" HorizontalAlignment="Center" Margin="0,327,0,0" BorderThickness="3" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="544" Height="93" Foreground="Black" BorderBrush="#FFED5C18" FontSize="18" FontFamily="Cascadia Mono" TextAlignment="Center" Padding="0,3,0,0">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="20"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+                <Button Content="      " HorizontalAlignment="Right" Margin="0,0,6,428" VerticalAlignment="Bottom" Height="18" Width="18" Click="exit">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/image/крест.png"/>
+                    </Button.Background>
+                </Button>
+                <Label x:Name="label_add2_Копировать" Content="Дополнительно" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Height="34" Margin="0,288,0,0" VerticalAlignment="Top" Width="544" FontSize="18" FontWeight="Bold" Background="White"/>
+                <Button Content=" посмотреть&#xD;&#xA;         всех" HorizontalAlignment="Right" FontSize="15" HorizontalContentAlignment="Center" Margin="0,0,10,73" VerticalAlignment="Bottom" Background="White" BorderBrush="#FFED5C18" BorderThickness="3" Height="51" Width="110" Click="cl_watch" FontWeight="Bold" FontStyle="Italic" Foreground="Black">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Content=" удалить&#xA;    авто" HorizontalAlignment="Right" HorizontalContentAlignment="Center" FontSize="15" Margin="0,0,10,137" VerticalAlignment="Bottom" Background="White" BorderBrush="#FFED5C18" BorderThickness="3" Height="51" Width="110" Click="cl_del" FontWeight="Bold" FontStyle="Italic" Foreground="Black">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </Grid>
+        </Viewbox>
+    </Grid>
+</Window>
