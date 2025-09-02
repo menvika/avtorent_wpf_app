@@ -1,0 +1,30 @@
+## Игнорировать файлы сборки
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+*.cache
+*.vs/
+.vs/
+packages/
+
+## Игнорировать системные файлы macOS
+.DS_Store
+*.DS_Store
+
+## Игнорировать выходные сборки
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+bld/
+
+## Игнорировать файлы NuGet
+*.nupkg
+*.nuget.props
+*.nuget.targets
+
+## Игнорировать резервные файлы
+*.bak
+*.tmp
+*.log
