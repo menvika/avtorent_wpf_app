@@ -1,0 +1,56 @@
+﻿<Window x:Class="interf.theme"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:interf"
+        WindowState="Maximized"
+        WindowStyle="None" mc:Ignorable="d"
+        Title="AVTORENT" Height="450" Width="800">
+    <Grid>
+        <Viewbox>
+            <Grid Height="450" Width="800">
+                <Label Content="🏎" HorizontalAlignment="Left" Margin="318,0,0,-68" Width="706" FontSize="450" Height="646" VerticalAlignment="Bottom">
+                    <Label.Background>
+                        <SolidColorBrush Opacity="0.105"/>
+                    </Label.Background>
+                    <Label.Foreground>
+                        <SolidColorBrush Color="#FFED5C18" Opacity="0.4"/>
+                    </Label.Foreground>
+                </Label>
+                <Label Content="Выберите тему" HorizontalAlignment="Center" Height="87" Margin="0,79,0,0" VerticalAlignment="Top" Width="374" Background="{x:Null}" Foreground="#FFED5C18" FontSize="48" FontWeight="Bold"/>
+                <RadioButton Content="Светлая" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Height="75" Width="246" FontSize="48" Background="White" Foreground="#FFED5C18" FontStyle="Italic" Checked="RadioButton_white" GroupName="theme" Margin="0,168,0,0" BorderBrush="#FF050100" IsChecked="True" Cursor="Hand"/>
+                <RadioButton Content="Темная" FontWeight="Bold"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="75" Width="246" FontSize="48" Background="White" Foreground="#FFED5C18" FontStyle="Italic" Margin="0,248,0,0" GroupName="theme" Checked="RadioButton_black" BorderBrush="Black" Cursor="IBeam"/>
+                <Button x:Name="buttheme" Content="Установить" HorizontalAlignment="Center" Height="67" Margin="0,336,0,0" VerticalAlignment="Top" Width="246" Background="#FFED5C18" BorderBrush="{x:Null}" FontSize="36" FontWeight="Bold" Foreground="White" Click="butUstanov">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="30"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+
+                <Label Content="AVTORENT " HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="48" FontFamily="Impact" FontWeight="Bold" FontStyle="Italic" Margin="3,0,0,0" Height="72" Width="227">
+                    <Label.Foreground>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFED5C18"/>
+                            <GradientStop Color="#FF732804" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Label.Foreground>
+                </Label>
+                <Label Content="аренда автомобиля с водителем" HorizontalAlignment="Left" Margin="4,47,0,0" VerticalAlignment="Top" FontFamily="Impact" FontSize="14">
+                    <Label.Foreground>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF903104"/>
+                            <GradientStop Color="#FFED5C18" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Label.Foreground>
+                </Label>
+                <Button Content="      " HorizontalAlignment="Right" Margin="0,0,6,428" VerticalAlignment="Bottom" Height="18" Width="18" Click="exit">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/image/крест.png"/>
+                    </Button.Background>
+                </Button>
+            </Grid>
+        </Viewbox>
+    </Grid>
+</Window>
