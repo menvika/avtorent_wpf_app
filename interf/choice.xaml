@@ -1,0 +1,80 @@
+﻿<Window x:Class="interf.choice"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:interf"
+        mc:Ignorable="d" WindowState="Maximized"
+        WindowStyle="None" Title="AVTORENT" Height="450" Width="800">
+    <Grid>
+        <Viewbox>
+            <Grid Height="450" Width="800">
+                <Label Content="ВЫБЕРИТЕ ДЕЙСТВИЕ" HorizontalAlignment="Right" Margin="0,0,102,356" VerticalAlignment="Bottom" Background="{x:Null}" FontSize="52" Foreground="#FFED5C18" FontWeight="Bold" Height="81" Width="592"/>
+                <Button x:Name="zakazi" Content="" Margin="0,0,553,170" BorderBrush="#FFED5C18" BorderThickness="3" Height="179" VerticalAlignment="Bottom" Click="cl_zakaz" HorizontalAlignment="Right" Width="179">
+                    <Button.Background>
+                        <ImageBrush ImageSource="image/arenda.png"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="Zakazi1" Content="ЗАКАЗЫ" HorizontalAlignment="Right" Margin="0,0,536,113" VerticalAlignment="Bottom" Foreground="White" Background="Black" FontWeight="Bold" FontSize="34" Height="52" Width="214" BorderBrush="Black" Click="cl_zakaz" RenderTransformOrigin="0.565,0.629">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="30"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Label Content="ДОБАВЛЕНИЕ" HorizontalAlignment="Right" Margin="0,0,576,78" VerticalAlignment="Bottom" Foreground="#FFED5C18" FontWeight="Bold" FontSize="18" FontStyle="Italic" Height="34" Width="134"/>
+                <Label Content="ПРОСМОТР" HorizontalAlignment="Right" Margin="0,0,582,55" VerticalAlignment="Bottom" Foreground="#FFED5C18" FontWeight="Bold" FontSize="18" FontStyle="Italic" Height="34" Width="122"/>
+                <Button x:Name="zakazi_Copy" Content="" Margin="0,0,69,170" Height="179" Panel.ZIndex="7" BorderThickness="3" BorderBrush="#FFED5C18" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="179" Click="avto">
+                    <Button.Background>
+                        <ImageBrush ImageSource="image/avto.png"/>
+                    </Button.Background>
+                </Button>
+                <Button Content="      " HorizontalAlignment="Right" Margin="0,0,6,428" VerticalAlignment="Bottom" Height="18" Width="18" Click="exit">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/image/крест.png"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="Zakazi1_Copy" Content="АВТО" HorizontalAlignment="Left" Margin="535,285,0,0" VerticalAlignment="Top" Foreground="White" BorderBrush="{x:Null}" FontWeight="Bold" FontSize="34" Height="52" Width="212" Background="Black" Click="avto">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="30"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Label Content="" HorizontalAlignment="Left" Margin="550,332,0,0" VerticalAlignment="Top" Foreground="#FFED5C18" FontWeight="Bold" FontSize="18" FontStyle="Italic" Grid.Column="1" Height="34" Width="10"/>
+                <Label Content="" HorizontalAlignment="Left" Margin="561,366,0,0" VerticalAlignment="Top" Foreground="#FFED5C18" FontWeight="Bold" FontSize="18" FontStyle="Italic" Grid.Column="1" Height="34" Width="10"/>
+                <Button x:Name="zakazi_Copy1" Content="" Margin="0,101,0,0" BorderBrush="#FFED5C18" BorderThickness="3" Height="179" VerticalAlignment="Top" HorizontalAlignment="Center" Width="180" Click="vodit">
+                    <Button.Background>
+                        <ImageBrush ImageSource="image/driver.png"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="Zakazi1_Copy1" Content="ВОДИТЕЛИ" HorizontalAlignment="Center" Margin="0,285,0,0" VerticalAlignment="Top" Foreground="White" BorderBrush="{x:Null}" Background="Black" FontWeight="Bold" FontSize="34" Height="52" Width="210" Click="vodit">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="30"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Label Content="ДОБАВЛЕНИЕ" HorizontalAlignment="Right" Margin="0,0,336,78" VerticalAlignment="Bottom" Foreground="#FFED5C18" FontWeight="Bold" FontSize="18" FontStyle="Italic" Height="34" Width="134"/>
+                <Label Content="ПРОСМОТР" HorizontalAlignment="Center" Margin="0,361,0,0" VerticalAlignment="Top" Foreground="#FFED5C18" FontWeight="Bold" FontSize="18" FontStyle="Italic" Height="34" Width="124"/>
+                <Label Content="УДАЛЕНИЕ" HorizontalAlignment="Right" Margin="0,0,338,34" VerticalAlignment="Bottom" Foreground="#FFED5C18" FontWeight="Bold" FontSize="18" FontStyle="Italic" Height="34" Width="120"/>
+                <Label Content="УДАЛЕНИЕ" HorizontalAlignment="Right" Margin="0,0,105,35" VerticalAlignment="Bottom" Foreground="#FFED5C18" FontWeight="Bold" FontSize="18" FontStyle="Italic" Height="34" Width="108"/>
+                <Label Content="ДОБАВЛЕНИЕ" HorizontalAlignment="Right" Margin="0,0,92,78" VerticalAlignment="Bottom" Foreground="#FFED5C18" FontWeight="Bold" FontSize="18" FontStyle="Italic" Height="34" Width="134"/>
+                <Label Content="ПРОСМОТР" HorizontalAlignment="Right" Margin="0,0,104,55" VerticalAlignment="Bottom" Foreground="#FFED5C18" FontWeight="Bold" FontSize="18" FontStyle="Italic" Height="34" Width="110"/>
+                <Button Content="      " Grid.ColumnSpan="2" HorizontalAlignment="Right" Margin="0,0,726,11" VerticalAlignment="Bottom" Height="39" Width="46" Click="cancel">
+                    <Button.Foreground>
+                        <SolidColorBrush Color="Black" Opacity="0"/>
+                    </Button.Foreground>
+                    <Button.BorderBrush>
+                        <SolidColorBrush Color="White" Opacity="0.015"/>
+                    </Button.BorderBrush>
+                    <Button.Background>
+                        <ImageBrush ImageSource="image/cancel.png"/>
+                    </Button.Background>
+                </Button>
+                <Label Content="УДАЛЕНИЕ" HorizontalAlignment="Right" Margin="0,0,583,32" VerticalAlignment="Bottom" Foreground="#FFED5C18" FontWeight="Bold" FontSize="18" FontStyle="Italic" Height="34" Width="120"/>
+            </Grid>
+        </Viewbox>
+    </Grid>
+</Window>
+
