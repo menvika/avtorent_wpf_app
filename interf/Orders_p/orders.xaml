@@ -1,0 +1,63 @@
+﻿<Window x:Class="interf.Orders_p.orders"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        WindowState="Maximized" WindowStyle="None"
+        xmlns:local="clr-namespace:interf"
+        mc:Ignorable="d"
+        Title="AVTORENT" Height="450" Width="800">
+    <Grid>
+        <Viewbox>
+            <Grid Height="450" Width="800">
+                <Label Content="🏎" HorizontalAlignment="Left" Margin="64,0,0,-18" Width="754" FontSize="600" Height="738" VerticalAlignment="Bottom">
+                    <Label.Background>
+                        <SolidColorBrush Opacity="0.105"/>
+                    </Label.Background>
+                    <Label.Foreground>
+                        <SolidColorBrush Color="#FFED5C18" Opacity="0.4"/>
+                    </Label.Foreground>
+                </Label>
+                <Label x:Name="label_zakaz" Content="ЗАКАЗЫ" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="74" Width="433" FontSize="56" HorizontalContentAlignment="Center" Background="{x:Null}" Foreground="#FFED5C18"/>
+
+                <Button Content="ДОБАВЛЕНИЕ" HorizontalAlignment="Right" Margin="0,0,27,219" VerticalAlignment="Bottom" Foreground="White" Background="#FFED5C18" BorderBrush="#FFED5C18" Height="86" Width="332" FontWeight="Bold" FontSize="42" Click="cl_add">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="20"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Content="УДАЛЕНИЕ" HorizontalAlignment="Center" Margin="0,287,0,0" VerticalAlignment="Top" Foreground="White" Background="#FFED5C18" BorderBrush="#FFED5C18" Height="86" Width="332" FontWeight="Bold" FontSize="42" Click="cl_delete">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="20"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Content="ПРОСМОТР" HorizontalAlignment="Left" Margin="42,0,0,219" VerticalAlignment="Bottom" Foreground="White" Background="#FFED5C18" BorderBrush="#FFED5C18" Height="86" Width="332" FontWeight="Bold" FontSize="42" Click="cl_watch">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="20"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Content="      " HorizontalAlignment="Right" Margin="0,0,726,11" VerticalAlignment="Bottom" Height="39" Width="46" Click="cancel">
+                    <Button.Foreground>
+                        <SolidColorBrush Color="Black" Opacity="0"/>
+                    </Button.Foreground>
+                    <Button.BorderBrush>
+                        <SolidColorBrush Color="White" Opacity="0.015"/>
+                    </Button.BorderBrush>
+                    <Button.Background>
+                        <ImageBrush ImageSource="/image/cancel.png"/>
+                    </Button.Background>
+                </Button>
+                <Button Content="      " HorizontalAlignment="Right" Margin="0,0,6,428" VerticalAlignment="Bottom" Height="18" Width="18" Click="exit">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/image/крест.png"/>
+                    </Button.Background>
+                </Button>
+            </Grid>
+        </Viewbox>
+    </Grid>
+</Window>

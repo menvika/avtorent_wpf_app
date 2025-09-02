@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AVTORENTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Avto">
+    <Key>
+      <PropertyRef Name="Государственный_номер" />
+    </Key>
+    <Property Name="Государственный_номер" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Год_выпуска" Type="Int32" />
+    <Property Name="Тип" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Стоимость_аренды" Type="Int32" Nullable="false" />
+    <Property Name="Стоимость_аренды_за_МКАДом" Type="Int32" />
+    <Property Name="Дополнительные_услуги" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="user_login" />
+    </Key>
+    <Property Name="user_login" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="user_password" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="AVTORENTEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Avto" EntityType="Self.Avto" />
+    <EntitySet Name="Users" EntityType="Self.Users" />
+  </EntityContainer>
+</Schema>

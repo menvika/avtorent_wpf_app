@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище AVTORENTModelContainer" CdmEntityContainer="AVTORENTEntities">
+    <EntitySetMapping Name="Avto">
+      <EntityTypeMapping TypeName="AVTORENTModel.Avto">
+        <MappingFragment StoreEntitySet="Avto">
+          <ScalarProperty Name="Государственный_номер" ColumnName="Государственный номер" />
+          <ScalarProperty Name="Год_выпуска" ColumnName="Год выпуска" />
+          <ScalarProperty Name="Тип" ColumnName="Тип" />
+          <ScalarProperty Name="Стоимость_аренды" ColumnName="Стоимость аренды" />
+          <ScalarProperty Name="Стоимость_аренды_за_МКАДом" ColumnName="Стоимость аренды за МКАДом" />
+          <ScalarProperty Name="Дополнительные_услуги" ColumnName="Дополнительные услуги" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="AVTORENTModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="user_login" ColumnName="user_login" />
+          <ScalarProperty Name="user_password" ColumnName="user_password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
