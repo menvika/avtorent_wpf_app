@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище AVTORENTModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Avto">
+          <Key>
+            <PropertyRef Name="Государственный номер" />
+          </Key>
+          <Property Name="Государственный номер" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Год выпуска" Type="int" />
+          <Property Name="Тип" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="Стоимость аренды" Type="int" Nullable="false" />
+          <Property Name="Стоимость аренды за МКАДом" Type="int" />
+          <Property Name="Дополнительные услуги" Type="nchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="user_login" />
+          </Key>
+          <Property Name="user_login" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="user_password" Type="varchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="Хранилище AVTORENTModelContainer">
+          <EntitySet Name="Avto" EntityType="Self.Avto" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AVTORENTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Avto">
+          <Key>
+            <PropertyRef Name="Государственный_номер" />
+          </Key>
+          <Property Name="Государственный_номер" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Год_выпуска" Type="Int32" />
+          <Property Name="Тип" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Стоимость_аренды" Type="Int32" Nullable="false" />
+          <Property Name="Стоимость_аренды_за_МКАДом" Type="Int32" />
+          <Property Name="Дополнительные_услуги" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="user_login" />
+          </Key>
+          <Property Name="user_login" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="user_password" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="AVTORENTEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Avto" EntityType="Self.Avto" />
+          <EntitySet Name="Users" EntityType="Self.Users" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище AVTORENTModelContainer" CdmEntityContainer="AVTORENTEntities">
+          <EntitySetMapping Name="Avto">
+            <EntityTypeMapping TypeName="AVTORENTModel.Avto">
+              <MappingFragment StoreEntitySet="Avto">
+                <ScalarProperty Name="Государственный_номер" ColumnName="Государственный номер" />
+                <ScalarProperty Name="Год_выпуска" ColumnName="Год выпуска" />
+                <ScalarProperty Name="Тип" ColumnName="Тип" />
+                <ScalarProperty Name="Стоимость_аренды" ColumnName="Стоимость аренды" />
+                <ScalarProperty Name="Стоимость_аренды_за_МКАДом" ColumnName="Стоимость аренды за МКАДом" />
+                <ScalarProperty Name="Дополнительные_услуги" ColumnName="Дополнительные услуги" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="AVTORENTModel.Users">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="user_login" ColumnName="user_login" />
+                <ScalarProperty Name="user_password" ColumnName="user_password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
